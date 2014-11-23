@@ -10,6 +10,7 @@ Build-Depends:
  flex,
  groff-base,
  libncurses5-dev | libncurses-dev,
+ libqt4-dev,
  libx11-dev,
  libxaw7-dev | libxaw-dev,
  libxext-dev,
@@ -25,7 +26,7 @@ Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-games/packages/trunk/nethack/
 Package: nethack-common
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: nethack-console | nethack-x11 | nethack-lisp
+Recommends: nethack-console | nethack-x11 | nethack-qt | nethack-lisp
 Description: dungeon crawl game - common files
  NetHack is a wonderfully silly, yet quite addictive, Dungeons &
  Dragons-style adventure game. You play a character from one of many
@@ -41,6 +42,7 @@ Description: dungeon crawl game - common files
  at the same time:
   - nethack-console: no graphics, just plain NetHack;
   - nethack-x11    : original X11/Athena-based graphical version;
+  - nethack-qt     : Qt-based graphical version;
   - nethack-lisp   : Lisp window version.
  .
  The various graphical front-ends for NetHack all share a large
@@ -75,6 +77,7 @@ Description: dungeon crawl game - text-based interface
  at the same time:
   - nethack-console: no graphics, just plain NetHack;
   - nethack-x11    : original X11/Athena-based graphical version;
+  - nethack-qt     : Qt-based graphical version;
   - nethack-lisp   : Lisp window version.
  .
  This package provides the plain console version of NetHack.
@@ -102,6 +105,7 @@ Description: dungeon crawl game - Lisp interface
  at the same time:
   - nethack-console: no graphics, just plain NetHack;
   - nethack-x11    : original X11/Athena-based graphical version;
+  - nethack-qt     : Qt-based graphical version;
   - nethack-lisp   : Lisp window version.
  .
  This package provides the version required for playing NetHack via
@@ -129,7 +133,36 @@ Description: dungeon crawl game - X11 interface
  at the same time:
   - nethack-console: no graphics, just plain NetHack;
   - nethack-x11    : original X11/Athena-based graphical version;
+  - nethack-qt     : Qt-based graphical version;
   - nethack-lisp   : Lisp window version.
  .
  This package provides the text and X11/Athena-based graphical versions
+ of NetHack.
+
+Package: nethack-qt
+Depends:
+ nethack-common (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Architecture: any
+Provides: nethack
+Description: dungeon crawl game - Qt interface
+ NetHack is a wonderfully silly, yet quite addictive, Dungeons &
+ Dragons-style adventure game. You play a character from one of many
+ classes (such as wizard, ranger, or tourist), fighting your way down to
+ retrieve the Amulet of Yendor (try saying THAT one backwards!) for your
+ god. On the way, you might encounter a quantum mechanic or two, or
+ perhaps King Arthur, or - if you're REALLY lucky - the Ravenous
+ Bugblatter Beast of Traal.
+ .
+ You should install a front-end for NetHack if you
+ wish to play the game.  Each of them includes the
+ original non-graphical version, and they can all be installed
+ at the same time:
+  - nethack-console: no graphics, just plain NetHack;
+  - nethack-x11    : original X11/Athena-based graphical version;
+  - nethack-qt     : Qt-based graphical version;
+  - nethack-lisp   : Lisp window version.
+ .
+ This package provides the text and Qt-based graphical versions
  of NetHack.

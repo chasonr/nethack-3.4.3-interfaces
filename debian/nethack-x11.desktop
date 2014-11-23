@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=X NetHack
+GenericName=NetHack (X interface)
+Icon=nethack
+Exec=/usr/games/xnethack
+Terminal=false
+Categories=Game;AdventureGame;

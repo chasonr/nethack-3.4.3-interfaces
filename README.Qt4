@@ -1,0 +1,37 @@
+About the Qt 4 interface
+========================
+
+This Qt 4 interface is derived from my Internationalized NetHack project
+(http://sourceforge.net/projects/nethack-i18n/), which, in turn, derives its
+Qt 4 interface at some length from the original Qt 3 interface.  The look and
+feel is mostly the same.
+
+Some improvements over the Qt 3 interface are:
+
+* Panes are resizable
+* Full support for IBMgraphics, and walls and corridors are drawn with
+  graphical primitives for a continuous appearance no matter what the font
+  says
+* Lots of irritating glitches fixed
+* Menus support proportional fonts correctly
+
+That @&%# bug where the player name reverts to the Unix user name is still at
+large, 
+
+Debian users
+============
+
+The debian/ directory is meant to be packaged as a source package, such as
+nethack_3.4.3-15.1.debian.tar.xz, and used to build the Debian packages from
+source.  It is to be paired with the unmodified source tree -- not this one,
+which has a small modification to sys/unix/Makefile.src and new sources in
+win/Qt4 (that is, debian/patches/0023-add-qt4-ui.patch is already applied).
+
+Users wishing only to build from source need only to follow the instructions
+in sys/unix/README.linux.
+
+Windows users
+=============
+
+It should be possible to build the Qt interface on Windows; but I have not
+modified the relevant makefile to do it.

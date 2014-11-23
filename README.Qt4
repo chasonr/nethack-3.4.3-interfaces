@@ -16,7 +16,7 @@ Some improvements over the Qt 3 interface are:
 * Menus support proportional fonts correctly
 
 That @&%# bug where the player name reverts to the Unix user name is still at
-large, 
+large, and the workaround is the same:  specify your user name in .nethackrc.
 
 Debian users
 ============

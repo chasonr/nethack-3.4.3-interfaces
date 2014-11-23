@@ -1,3 +1,10 @@
+nethack (3.4.3-15.1) unstable; urgency=medium
+
+  [ Ray Chason ]
+  * Add the Qt 4 interface, reviving the nethack-qt package.
+
+ -- Ray Chason <chasonr@gmail.com>  Sat, 22 Nov 2014 19:22:30 -0500
+
 nethack (3.4.3-15) unstable; urgency=medium
 
   [ Evgeni Golov ]
